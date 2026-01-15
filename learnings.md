@@ -1,3 +1,7 @@
+## what is difference between images and containers
+
+## what are layers in images
+
 1st file:
 
 FROM node
@@ -47,3 +51,39 @@ omkar2004@omkar-HP-Laptop-15s-fq5xxx:~/Devops/tut1/nodejs-app-first-dockerfile$ 
  => exporting to image                                                                                                                                  0.1s
  => => exporting layers                                                                                                                                 0.0s
  => => writing image sha256:b358e06e5c4796208c4b4d4df180b7ed4ccb3bcd88051872eceec7b8eb51e8b2
+
+
+
+
+ ## learnings
+ - using --help effectively you dont need to memorized anything
+
+ -  managing images and containers:
+    -   images can be tagged, listed, analyzed, removed
+    -   containers can be named, can be configured in detail
+
+ - stopping and restarting containers using docker run container_name
+
+ - attached and detached containers using flags -a, -d, logs, attach etc
+
+
+# COMMANDS :
+1. building image : docker build .
+2. running a container : docker run --help
+    - docker run -p 3000:80 <image_id>
+3. stopping a container :
+    - docker stop <container_name>
+4. see running containers : 
+    - docker ps
+5. see all containers (stopped + running):
+    - docker ps -a
+6. restarting docker container
+    - docker start <container_name>
+7. attached and detached mode
+    - -d, -a
+8. attaching to container
+    - docker attach <running_container_name>
+9. entering docker in interactive mode
+    - docker run -i
+10. restarting docker container in interactive mode with new terminal
+    - docker run -i -t
